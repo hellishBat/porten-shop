@@ -1,0 +1,28 @@
+// Card
+.card {
+  width: 100%;
+  max-width: 260px;
+  font-family: $secondary-font;
+
+  &__body {
+    display: block;
+    margin-bottom: 25px;
+    padding: 53px 22px 53px 23px;
+    background-color: $black-pearl;
+  }
+
+  &__title,
+  &__price {
+    line-height: 1.333;
+  }
+
+  &__title {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  &__footer {
+    font-size: 16px;
+  }
+}

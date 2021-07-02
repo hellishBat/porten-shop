@@ -1,0 +1,19 @@
+// New goods
+.new-goods {
+  padding: 120px 0 150px;
+
+  &__heading {
+    margin: 0 0 81px;
+
+    &:after {
+      margin-top: 39px;
+    }
+  }
+
+  &__grid {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 23px;
+    row-gap: 40px;
+    justify-content: center;
+  }
+}

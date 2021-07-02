@@ -1,0 +1,46 @@
+<!-- Header -->
+header#header.header
+  .header__row.header__row--top
+    .container
+      .header__inner.header__inner--top.d-f
+        ul.header__list.d-f
+          li.header__item
+            a.header__phone(href="tel:8(812)1234567")
+              svg.header__phone-icon
+                use(href="images/sprite.svg#phone-outline")
+              | 8 (812) 123-45-67
+          li.header__item
+            | Работаем 7 дней в неделю
+          li.header__item
+            | 9:00 — 18:00
+        button.header__btn.btn
+          svg.header__btn-icon
+            use(href="images/sprite.svg#log-in")
+          | Войти / Регистрация
+
+  .header__row.header__row--bottom
+    .container
+      .header__inner.header__inner--bottom.d-f
+        a.header__logo.logo(href="#")
+          img.header__logo-img.logo__img(src='images/logos/logo.png' alt="PORTEN | Мужской магазин")
+        menu.header__menu.d-f
+          nav.header__nav.nav
+            ul.header__nav-list.nav__list.d-f
+              li.nav__item
+                a.nav__link(href="#")
+                  | Понравилось
+              li.nav__item
+                a.nav__link(href="#")
+                  | Личный кабинет
+              li.nav__item
+                a.nav__link(href="#")
+                  | Настройки
+          a.header__action(href="#")
+            svg.header__action-icon
+              use(href="images/sprite.svg#cart")
+              title Корзина
+          a.header__action(href="#")
+            svg.header__action-icon
+              use(href="images/sprite.svg#search")
+              title Поиск товаров
+<!-- /Header -->

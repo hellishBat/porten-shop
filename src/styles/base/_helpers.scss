@@ -2,17 +2,17 @@
   position: relative;
   width: 100%;
   min-height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .page {
-	position: absolute;
-	top: 0;
-	left: 0;
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
 }
 
 .container {
@@ -39,8 +39,8 @@
   }
 }
 
-.d-b {
-  display: block;
+.d-g {
+  display: grid;
 }
 
 .d-f {
@@ -71,23 +71,69 @@
   flex-direction: column;
 }
 
+.fd-rr {
+  flex-direction: row-reverse;
+}
+
 .fxw-w {
   flex-wrap: wrap;
 }
 
-.flex-wrapper {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+.ovl-50,
+.ovl-85 {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+  }
 }
 
-.sr-only {
-  display: block;
-  font-size: 0;
-  line-height: 0;
-  width: 0;
+.ovl-50 {
+  &::before {
+    background-image: linear-gradient(0deg, rgba(15, 15, 15, 0.5), rgba(15, 15, 15, 0.5));
+  }
 }
 
-.fw-bold {
-  font-weight: 700;
+.ovl-85 {
+  &::before {
+    background-image: linear-gradient(0deg, rgba(15, 15, 15, 0.85), rgba(15, 15, 15, 0.85));
+  }
+}
+
+.ar-1-1,
+.ar-255-94 {
+  position: relative;
+
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+  }
+
+  & > img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+  }
+}
+
+.ar-1-1 {
+  &::before {
+    padding-top: (1 / 1) * 100%;
+  }
+}
+
+.ar-255-94 {
+  &::before {
+    padding-top: (94 / 255) * 100%;
+  }
 }

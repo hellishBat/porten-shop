@@ -1,1 +1,99 @@
 // Header
+.header {
+  position: absolute;
+  width: 100%;top: 0;
+  left: 0;
+  z-index: 100;
+  color: $gray;
+  line-height: 1.14;
+
+  &__row {
+    &--top {
+      padding: 14px 0;
+      font-size: 12px;
+      line-height: 1.29;
+      background-color: $black;
+    }
+
+    &--bottom {
+      padding: 15px 0 13px;
+      background-color: $onyx;
+    }
+  }
+
+  &__inner {
+    align-items: center;
+  }
+
+  &__list {
+    display: inline-flex;
+  }
+
+  &__item + &__item {
+    margin-left: 14px;
+
+    &::before {
+      display: inline-block;
+      width: 1px;
+      height: 9px;
+      margin-right: 13px;
+      background-color: $gray;
+      content: "";
+    }
+  }
+
+  &__phone,
+  &__btn {
+    position: relative;
+    padding-left: 31px;
+    transition: color 0.3s ease 0s;
+
+    @include respond(min-md) {
+      &:hover {
+        & {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    padding-left: 26px;
+    margin-left: auto;
+  }
+
+  &__phone-icon,
+  &__btn-icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    transform: translateY(-50%);
+  }
+
+  &__logo {
+    max-width: 102px;
+  }
+
+  &__menu {
+    margin-left: auto;
+    align-items: center;
+  }
+
+  &__action {
+    margin-left: 40px;
+    color: $white;
+
+    @include respond(min-md) {
+      &:hover {
+        color: $gray;
+      }
+    }
+  }
+
+  &__action-icon {
+    width: 22px;
+    height: 22px;
+  }
+}

@@ -1,0 +1,45 @@
+// Section
+.section {
+
+  &__heading {
+    margin: 0 0 40px;
+    font-family: $secondary-font;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.33;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+
+    &::after {
+      display: block;
+      width: 120px;
+      height: 1px;
+      margin: 31px auto 0;
+      background-color: $white;
+      content: '';
+    }
+
+    &--expanded {
+      margin: 0 0 50px;
+
+      &::after {
+        margin: 41px auto 0;
+      }
+    }
+
+    &--shrunk {
+      margin: 0 0 30px;
+
+      &::after {
+        margin: 21px auto 0;
+      }
+    }
+
+    &--regular {
+      font-weight: 400;
+    }
+
+
+  }
+}

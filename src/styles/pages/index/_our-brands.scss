@@ -1,0 +1,21 @@
+// Our brands
+.our-brands {
+  padding: 60px 0 68px;
+  background-color: $onyx;
+
+  &__heading {
+    &::after {
+      margin-top: 40px;
+    }
+  }
+
+  &__grid {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+    justify-content: center;
+  }
+
+  &__item {
+    display: grid;
+  }
+}

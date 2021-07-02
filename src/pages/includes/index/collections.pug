@@ -1,0 +1,33 @@
+<!-- Collections-->
+include ../mixins/mixins
+
+section#collections.collections.section
+  .collections__row.d-f
+    .collections__col.collections__col--big.collections__col--season
+      .container
+        h2.collections__heading.section__heading.section__heading--expanded
+          | Сезон 2020/21
+        .collections__grid.d-g
+          +card("collections__card", "#", "images/content/product-01.png", "Rotonde de Cartier Sun&Moon", "Rotonde de Cartier", "50 584 457")
+          +card("collections__card", "#", "images/content/product-02.png", "Santos de Cartier", "Santos de Cartier", "321 781")
+          +card("collections__card", "#", "images/content/product-03.png", "Must de Cartier", "Must de Cartier", "183 704")
+    .collections__col.collections__col--small.collections__col--collection.d-f.fd-c.jc-fe.ai-c.ovl-50(style='background-image: url(images/bg/collections-bg-01.jpg);')
+      .container
+        .collections__content.d-f.fd-c.jc-fe.ai-c
+          h2.collections__heading.section__heading.section__heading--shrunk
+            | Новая коллекция
+          a.collections__btn.btn(href="#")
+            | Каталог
+
+  .collections__row.d-f.fd-rr
+    .collections__col.collections__col--big.collections__col--collection
+      .container
+        .collections__content.d-f.fd-c.jc-fe.ai-c
+          h2.collections__heading.section__heading.section__heading--regular
+            | Коллекция 2018
+          p.collections__text
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non rutrum ornare ut mattis habitant dui arcu. Sagittis amet nunc ut neque quis nibh arcu. Vivamus vestibulum nisi et venenatis sed scelerisque magna consectetur. Amet convallis quis gravida facilisis vulputate. Faucibus facilisi habitasse ipsum interdum dictum aliquet. Velit quis ullamcorper pulvinar nulla malesuada integer. Aenean praesent viverra nulla nullam natoque volutpat curabitur auctor. Viverra viverra ullamcorper scelerisque risus dignissim egestas. Id aliquam a aliquam egestas leo orci pharetra sed diam. 
+          a.collections__btn.btn(href="#")
+            | Посмотреть коллекцию
+    .collections__col.collections__col--small.ovl-50(style='background-image: url(images/bg/collections-bg-02.jpg);')
+<!-- /Collections-->

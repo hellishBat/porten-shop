@@ -1,7 +1,7 @@
 // Container properties
-$cont-width: 1140;
+$cont-width: 1110;
 $min-width: 320px;
-$max-width: $cont-width + 30;
+$max-width: $cont-width+30;
 
 // Media breakpoints
 $media-lg: 1199.98;
@@ -10,8 +10,16 @@ $media-sm: 767.98;
 $media-xs: 575.98;
 
 // Fonts
-$default-font: sans-serif;
+$primary-font: "PTSans",
+sans-serif;
+$secondary-font: "PlayfairDisplay",
+sans-serif;
+$logo-font: "PostNoBillsJaffna";
 
 // Colours
 $white: #ffffff;
-$primary-accent: blue;
+$black: #000000;
+$black-pearl: #191B1C;
+$onyx: #0f0f0f;
+$dark-gray: #1f1f1f;
+$gray: #969696;

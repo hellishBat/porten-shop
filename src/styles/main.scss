@@ -13,10 +13,16 @@
 // Components
 @import "components/logo";
 @import "components/btn";
+@import "components/nav";
+@import "components/section";
+@import "components/card";
 
 // Layout-related sections
 @import "common/header";
 @import "common/footer";
 
 // Page-specific styles
-@import "pages/index/index";
+@import "pages/index/hero";
+@import "pages/index/collections";
+@import "pages/index/new-goods";
+@import "pages/index/our-brands";

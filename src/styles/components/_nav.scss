@@ -1,0 +1,15 @@
+// Nav
+.nav {
+  &__link {
+    padding: 31px 20px;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+
+    @include respond(min-md) {
+      &:hover {
+        background-color: $dark-gray;
+        color: $white;
+      }
+    }
+  }
+}

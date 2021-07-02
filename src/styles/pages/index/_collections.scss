@@ -1,0 +1,50 @@
+// Collections
+.collections {
+  &__col {
+    &--big {
+      flex: 1 0 54.17%;
+    }
+
+    &--small {
+      flex: 0 1 45.83%;
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &--season {
+      padding: 93px 0;
+    }
+
+    &--collection {
+      padding: 100px 0;
+    }
+  }
+
+  &__grid {
+    grid-template-columns: repeat(3, minmax(auto, 260px));
+    column-gap: 50px;
+    justify-content: center;
+    // max-width: 880px;
+    // margin: 0 auto;
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  &__btn {
+    position: relative;
+    padding: 13.5px 28px;
+    border: 1px solid $white;
+    font-size: 18px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    max-width: 471px;
+    margin: 0 0 50px;
+    text-align: center;
+  }
+}
