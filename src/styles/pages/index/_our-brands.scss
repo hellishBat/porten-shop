@@ -1,6 +1,6 @@
 // Our brands
 .our-brands {
-  padding: 60px 0 68px;
+  padding: 60px 0 75px;
   background-color: $onyx;
 
   &__heading {
@@ -12,10 +12,16 @@
   &__grid {
     grid-template-columns: repeat(4, 1fr);
     column-gap: 30px;
-    justify-content: center;
   }
 
   &__item {
     display: grid;
+  }
+
+  @include respond(max-sm) {
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 23px;
+    }
   }
 }

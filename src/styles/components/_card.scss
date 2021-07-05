@@ -1,18 +1,26 @@
 // Card
 .card {
+  display: block;
   width: 100%;
   max-width: 260px;
   font-family: $secondary-font;
+  transition: ease 0.3s transform 0s;
+
+  @include respond(min-md) {
+    &:hover {
+      & {
+        transform: scale(1.05);
+      }
+    }
+  }
 
   &__body {
-    display: block;
-    margin-bottom: 25px;
-    padding: 53px 22px 53px 23px;
+    padding: 55px 22px 55px 23px;
     background-color: $black-pearl;
   }
 
-  &__title,
-  &__price {
+  &__footer {
+    padding-top: 25px;
     line-height: 1.333;
   }
 
@@ -22,7 +30,7 @@
     font-weight: 400;
   }
 
-  &__footer {
+  &__price {
     font-size: 16px;
   }
 }

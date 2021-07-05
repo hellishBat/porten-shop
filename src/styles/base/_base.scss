@@ -1,3 +1,12 @@
+:root {
+  --dynamic-vh: 0;
+  --header-height: 124px;
+
+  @include respond(max-md) {
+    --header-height: 96px;
+  }
+}
+
 html,
 *,
 *::before,
@@ -10,10 +19,6 @@ body {
   height: 100%;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   display: flex;
   flex-direction: column;
@@ -22,16 +27,18 @@ body {
   font-size: 14px;
   line-height: 1.5;
   color: $white;
+  overflow-x: hidden;
 
   @include respond(max-md) {
     &.lock {
-      overflow: hidden;
+      overflow-y: hidden;
     }
   }
 }
 
 main {
   flex: 1 0 auto;
+  min-height: 100%;
 }
 
 ul,

@@ -1,7 +1,9 @@
 // Footer
 .footer {
+  flex: 0 0 auto;
+
   &__body {
-    padding: 80px 0 99px;
+    padding: 82px 0 98px;
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -74,5 +76,58 @@
     font-weight: 700;
     text-decoration: underline;
     text-align: right;
+  }
+
+  @include respond(max-md) {
+    &__content {
+      flex-wrap: wrap;
+    }
+
+    &__col {
+      width: 50%;
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+
+      &--subscribe {
+        width: 100%;
+      }
+    }
+  }
+
+  @include respond(max-xs) {
+    & {
+      text-align: center;
+    }
+
+    &__col {
+      width: 100%;
+    }
+
+    &__tags {
+      justify-content: center;
+    }
+
+    &__form {
+      flex-direction: column;
+      align-items: stretch;
+      max-width: 260px;
+      margin: 0 auto;
+    }
+
+    &__input {
+      flex-basis: auto;
+    }
+
+    &__copyright-body {
+      justify-content: start;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    &__rights {
+      margin-bottom: 15px;
+    }
   }
 }

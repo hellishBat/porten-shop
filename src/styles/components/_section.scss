@@ -1,6 +1,5 @@
 // Section
 .section {
-
   &__heading {
     margin: 0 0 40px;
     font-family: $secondary-font;
@@ -17,7 +16,7 @@
       height: 1px;
       margin: 31px auto 0;
       background-color: $white;
-      content: '';
+      content: "";
     }
 
     &--expanded {
@@ -39,7 +38,27 @@
     &--regular {
       font-weight: 400;
     }
+  }
 
+  @include respond(max-md) {
+    &__heading {
+      margin-bottom: 45px;
 
+      &::after {
+        margin-top: 35px;
+      }
+    }
+  }
+
+  @include respond(max-sm) {
+    &__heading {
+      font-size: 32px;
+    }
+  }
+
+  @include respond(max-xs) {
+    &__heading {
+      font-size: 27px;
+    }
   }
 }

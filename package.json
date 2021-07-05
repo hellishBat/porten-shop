@@ -53,6 +53,7 @@
     "yargs": "^16.2.0"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "normalize.css": "^8.0.1"
   }
 }

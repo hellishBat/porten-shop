@@ -1,6 +1,6 @@
 // Hero
 .hero {
-  padding-top: 124px;
+  padding-top: var(--header-height);
   background-origin: content-box;
   background-size: cover;
   background-repeat: no-repeat;
@@ -9,6 +9,7 @@
   &__body {
     padding-top: 160px;
     min-height: 810px;
+    min-height: calc(var(--dynamic-vh) - (var(--header-height)));
   }
 
   &__content {
@@ -19,14 +20,13 @@
   }
 
   &__logo {
-    max-width: 320px;
-    min-height: 320px;
+    max-width: 5em;
+    min-height: 5em;
     width: 100%;
     margin: 0 auto;
     font-size: 64px;
     margin-bottom: 1.25em;
     border: 4px solid $white;
-
   }
 
   &__title,
@@ -49,7 +49,7 @@
       width: 100%;
       height: 2px;
       background-color: $white;
-      content: '';
+      content: "";
     }
   }
 
@@ -60,6 +60,43 @@
 
   &__text {
     margin: 0;
+    padding-bottom: 45px;
     font-size: 16px;
+  }
+
+  @include respond(max-lg) {
+    &__logo {
+      font-size: 55px;
+    }
+  }
+
+  @include respond(max-md) {
+    &__content {
+      max-width: 615px;
+    }
+
+    &__logo {
+      font-size: 44px;
+    }
+  }
+
+  @include respond(max-sm) {
+    &__logo {
+      font-size: 40px;
+    }
+  }
+
+  @include respond(max-xs) {
+    &__body {
+      padding-top: 100px;
+    }
+
+    &__logo {
+      font-size: 36px;
+    }
+
+    &__text {
+      font-size: 14px;
+    }
   }
 }

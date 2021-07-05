@@ -21,19 +21,23 @@ header#header.header
   .header__row.header__row--bottom
     .container
       .header__inner.header__inner--bottom.d-f
-        a.header__logo.logo(href="#")
-          img.header__logo-img.logo__img(src='images/logos/logo.png' alt="PORTEN | Мужской магазин")
+        a.header__logo(href="#")
+          img.header__logo-img(src='images/logos/logo.png' alt="PORTEN - Мужской магазин")
         menu.header__menu.d-f
-          nav.header__nav.nav
-            ul.header__nav-list.nav__list.d-f
-              li.nav__item
-                a.nav__link(href="#")
+          button.header__menu-btn.js-nav-btn(title ='Меню')
+            span.header__line
+            span.header__line
+            span.header__line
+          nav.header__nav.js-nav-menu
+            ul.header__nav-list.d-f
+              li.header__nav-item
+                a.header__nav-link(href="#")
                   | Понравилось
-              li.nav__item
-                a.nav__link(href="#")
+              li.header__nav-item
+                a.header__nav-link(href="#")
                   | Личный кабинет
-              li.nav__item
-                a.nav__link(href="#")
+              li.header__nav-item
+                a.header__nav-link(href="#")
                   | Настройки
           a.header__action(href="#")
             svg.header__action-icon

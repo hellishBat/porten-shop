@@ -1,16 +1,18 @@
 //- Card
 mixin card(block_class, card_link, card_img_src, card_img_alt, card_title, card_price)
-  article(class= block_class).card
-    a.card__body(href= card_link)
-      .card__img-wrapper.ar-1-1
-        img.card__img(src= card_img_src, alt=card_img_alt)
-    h4.card__title= card_title
-    .card__footer
-      span.card__price= card_price
-      span.card__currency  руб.
+  a(class= block_class href= card_link).card
+    .card__inner( data-aos="flip-left" data-aos-delay="400")
+      .card__body
+        .card__media.ar-1-1
+          img.card__img(src= card_img_src, alt=card_img_alt)
+      .card__footer
+        h4.card__title= card_title
+        .card__price
+          span.card__price= card_price
+          span.card__currency  руб.
 
 //- Our brands item
 mixin brands_item(brands_link, brands_img_src, brands_img_alt)
-  li.our-brands__item 
+  li.our-brands__item(data-aos="zoom-in" data-aos-delay="400")
     a.our-brands__link.ar-255-94(href= brands_link)
       img.our-brands__img(src= brands_img_src, alt= brands_img_alt)

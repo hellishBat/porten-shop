@@ -3,41 +3,42 @@ footer#footer.footer
   .footer__body.ovl-85(style='background-image: url(images/bg/footer-bg.jpg);')
     .container
       .footer__content.d-f.fxw-w
-        .footer__col
+        .footer__col(data-aos="fade-up")
           h3.footer__heading
             | О магазине
           p.footer__about-text
             | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi semper viverra nunc cursus tortor lectus nunc nulla nibh. Egestas amet consectetur vel vitae aliquam dictum suspendisse. Lobortis eget consequat, tellus et et sed turpis. Pretium quisque vitae, amet, porttitor odio ultricies massa pharetra leo. Et ipsum urna fames in sit mi ultrices nisi, nunc.
 
-        .footer__col
+        .footer__col(data-aos="fade-up")
           h3.footer__heading
             | Категории
-          ul.footer__list.d-f.fxw-w
-            li.footer__item
-              a.footer__tag.btn.btn--bk(href="#")
+          ul.footer__tags.d-f.fxw-w
+            li.footer__tag
+              a.btn.btn--bk(href="#")
                 | часы
-            li.footer__item
-              a.footer__tag.btn.btn--bk(href="#")
+            li.footer__tag
+              a.btn.btn--bk(href="#")
                 | браслеты
-            li.footer__item
-              a.footer__tag.btn.btn--bk(href="#")
+            li.footer__tag
+              a.btn.btn--bk(href="#")
                 | ремни
-            li.footer__item
-              a.footer__tag.btn.btn--bk(href="#")
+            li.footer__tag
+              a.btn.btn--bk(href="#")
                 | ювелирные изделия
-            li.footer__item
-              a.footer__tag.btn.btn--bk(href="#")
+            li.footer__tag
+              a.btn.btn--bk(href="#")
                 | запонки
 
-        .footer__col
+        .footer__col.footer__col--subscribe(data-aos="fade-up")
           h3.footer__heading
             | Рассылка
           p.footer__subscribe-text
             | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi semper viverra nunc cursus tortor lectus nunc nulla nibh.
           form.footer__form.d-f.ai-c(action="#")
-            input.footer__input(type="email" placeholder="Ваша почта")
+            input.footer__input(type="email" autocomplete="email" placeholder="Ваша почта")
             button.footer__subscribe-btn.btn.btn--bk
               | ПОДПИСАТЬСЯ 
+
   .footer__copyright
     .container
       .footer__copyright-body.d-f

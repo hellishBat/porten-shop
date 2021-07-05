@@ -6,14 +6,35 @@
     margin: 0 0 81px;
 
     &:after {
-      margin-top: 39px;
+      margin-top: 40px;
     }
   }
 
   &__grid {
     grid-template-columns: repeat(4, 1fr);
     column-gap: 23px;
-    row-gap: 40px;
-    justify-content: center;
+    row-gap: 41px;
+  }
+
+  @include respond(max-md) {
+    & {
+      padding: 80px 0;
+    }
+    &__grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @include respond(max-sm) {
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @include respond(max-xs) {
+    &__grid {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
   }
 }

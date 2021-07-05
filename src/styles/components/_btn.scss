@@ -11,24 +11,34 @@
   outline: transparent;
   cursor: pointer;
   white-space: nowrap;
-  transition-property: background-color, color;
-  transition-duration: 0.3s;
-  transition-timing-function: ease;
+  transition: all 0.3s ease 0s;
+
+  &:focus {
+    box-shadow: 0 0 0 2px rgba($white, 0.4);
+  }
+
+  &--ghost,
+  &--bk {
+    @include respond(min-md) {
+      &:hover {
+        background-color: $white;
+        color: $black;
+      }
+    }
+  }
+
+  &--ghost {
+    padding: 11.5px 28px;
+    border: 1px solid $white;
+    font-size: 18px;
+    line-height: 1.27;
+    letter-spacing: 1.35px;
+    text-transform: uppercase;
+  }
 
   &--bk {
     padding: 10px 20px;
     background-color: $onyx;
     line-height: 1.5;
-  }
-
-  @include respond(min-md) {
-    &:hover {
-      background-color: $white;
-      color: $black;
-    }
-
-    &:focus {
-      box-shadow: 0 0 0 2px rgba($white, 0.4);
-    }
   }
 }
