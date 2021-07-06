@@ -228,8 +228,6 @@
     }
   }
 
-  @include respond(max-sm) {}
-
   @include respond(max-xs) {
     &__item:not(:first-child) {
       display: none;
