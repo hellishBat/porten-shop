@@ -52,7 +52,7 @@ const path = {
   },
   resources: {
     src: './src/resources/**',
-    dist: './dist',
+    dist: './dist/',
     watch: './src/resources/**',
   },
   fonts: {
@@ -81,7 +81,6 @@ const pages = () => {
     .pipe(plumber({
       errorHandler: onError
     }))
-
     .pipe(pugLinter({
       reporter: 'default'
     }))
@@ -103,15 +102,15 @@ const styles = () => {
       includePaths: ['node_modules'],
       outputStyle: 'expanded'
     }))
-    .pipe(autoprefixer({
-      cascade: false,
-    }))
-    .pipe(gulpif(!production, sourcemaps.write()))
     .pipe(groupMedia())
+    .pipe(autoprefixer({
+      cascade: false
+    }))
     .pipe(gulpif(production, csso()))
     .pipe(gulpif(production, rename({
-      suffix: ".min"
+      suffix: '.min'
     })))
+    .pipe(gulpif(!production, sourcemaps.write('.')))
     .pipe(dest(path.styles.dist))
     .pipe(browserSync.stream());
 }
