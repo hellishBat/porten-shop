@@ -30,6 +30,8 @@
   &__grid {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 50px;
+    max-width: 880px;
+    margin: 0 auto;
   }
 
   &__content {
@@ -61,6 +63,11 @@
   }
 
   @include respond(max-md) {
+    &__grid {
+      column-gap: 23px;
+      row-gap: 40px;
+    }
+
     &__col {
       padding: 80px 0;
     }
@@ -73,8 +80,6 @@
   @include respond(max-sm) {
     &__grid {
       grid-template-columns: repeat(2, 1fr);
-      column-gap: 23px;
-      row-gap: 40px;
     }
   }
 
