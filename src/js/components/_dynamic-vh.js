@@ -2,11 +2,8 @@
 export const setDynamicVH = () => {
   let root = document.documentElement;
   let vh = window.innerHeight;
-  root.style.setProperty('--dynamic-vh', vh + 'px');
-}
+  root.style.setProperty("--dynamic-vh", vh + "px");
+};
 
-setDynamicVH();
-
-window.addEventListener('resize', () => {
-  setDynamicVH();
-});
+window.addEventListener("load", setDynamicVH);
+window.addEventListener("resize", setDynamicVH);

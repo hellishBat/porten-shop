@@ -1,10 +1,10 @@
 // Header
 // Hide header on scroll
-let prevScrollPos = window.scrollY || document.scrollTop;
+const header = document.querySelector(".header");
 let curScrollPos;
+let prevScrollPos = window.scrollY || document.scrollTop;
 let direction = 0;
 let prevDirection = 0;
-const header = document.querySelector(".header");
 
 export const checkScroll = () => {
   /*

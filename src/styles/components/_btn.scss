@@ -8,10 +8,11 @@
   border: none;
   background-color: transparent;
   color: inherit;
-  outline: transparent;
-  cursor: pointer;
   white-space: nowrap;
   transition: all 0.3s ease 0s;
+  outline: transparent;
+  cursor: pointer;
+  user-select: none;
 
   &:focus {
     box-shadow: 0 0 0 2px rgba($white, 0.4);
