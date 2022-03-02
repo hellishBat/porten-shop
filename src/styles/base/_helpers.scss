@@ -79,13 +79,21 @@
 
 .ovl-50 {
   &::before {
-    background-image: linear-gradient(0deg, rgba(15, 15, 15, 0.5), rgba(15, 15, 15, 0.5));
+    background-image: linear-gradient(
+      0deg,
+      rgba(15, 15, 15, 0.5),
+      rgba(15, 15, 15, 0.5)
+    );
   }
 }
 
 .ovl-85 {
   &::before {
-    background-image: linear-gradient(0deg, rgba(15, 15, 15, 0.85), rgba(15, 15, 15, 0.85));
+    background-image: linear-gradient(
+      0deg,
+      rgba(15, 15, 15, 0.85),
+      rgba(15, 15, 15, 0.85)
+    );
   }
 }
 
@@ -99,7 +107,7 @@
     width: 100%;
   }
 
-  &>img {
+  & > img {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -112,12 +120,12 @@
 
 .ar-1-1 {
   &::before {
-    padding-top: (1 / 1) * 100%;
+    padding-top: calc((1 / 1) * 100%);
   }
 }
 
 .ar-255-94 {
   &::before {
-    padding-top: (94 / 255) * 100%;
+    padding-top: calc((94 / 255) * 100%);
   }
 }

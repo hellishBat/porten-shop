@@ -35,8 +35,14 @@ Thumbs.db
 npm-debug.log
 package-lock.json
 
+# Yarn
+.pnp.*
+.yarnrc.yml
+yarn.lock
+
 # Folders
 node_modules/
+.yarn/*
 dist/
 
 #Log files
